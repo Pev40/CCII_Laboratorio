@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1618966796 source:c:\users\user\desktop\data_files\ccii_laboratorio\laboratorio_01\ejercicio_3.1\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
