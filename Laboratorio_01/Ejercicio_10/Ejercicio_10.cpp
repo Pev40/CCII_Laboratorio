@@ -4,9 +4,9 @@
 
 using namespace std;
 
-long Sumar_en_Criba(bool array_num[], int len){
-    long Num_contador=0;
-    int posicion;
+long long int Sumar_en_Criba(bool array_num[], int len){
+    long long int Num_contador=0;
+    long long int posicion;
  for (int i = 2; i < len; i++)
  {
      if(array_num[i]==true){
@@ -19,7 +19,7 @@ return Num_contador;
 
 
 
-long Criba_de_Eratostenes(bool array_num[], int len){
+long long int Criba_de_Eratostenes(bool array_num[], int len){
     array_num[0] = false;
     array_num[1] = false;
     for(int i = 2; i <= len; ++i) 
@@ -38,7 +38,7 @@ long Criba_de_Eratostenes(bool array_num[], int len){
 int main(){
     bool Numero[2000000];
     long long int Suma_primos;
-    Suma_primos = Criba_de_Eratostenes(Numero, 1000000);
+    Suma_primos = Criba_de_Eratostenes(Numero, 2000000);
     cout<<"La suma es "<<Suma_primos;
 system("pause");
 return 0;
