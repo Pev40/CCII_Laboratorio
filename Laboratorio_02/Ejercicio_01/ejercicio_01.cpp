@@ -4,14 +4,6 @@
 
 using namespace std;
 
-long long suma(long long * array, long long tamano){
-    if(tamano==0){
-        return 0;
-    }else{
-        return array[tamano-1] + suma(array ,tamano - 1);
-    }
-}
-
 long long suma(long long * lista,long long inicio, long long fin){
     if(inicio > fin){
         return 0;
@@ -49,10 +41,10 @@ return ;
 
 int main(){
     long long Tam = 1000000;
-    long long * lista;
+    long long * lista = new long long [Tam];
     generarLista(lista,Tam);
-    mostrarArray(lista, Tam);
-    cout<<suma(lista,Tam);
+   // mostrarArray(lista, Tam);
+    cout<<suma(lista,0, Tam);
 
 system("pause");
 }
