@@ -38,6 +38,15 @@ return ;
 
 }
 
+long long sumaiterativa(long long *lista, long long tam){
+    long long contador=0;
+    for (long long i = 0; i < tam ; i++)
+    {
+        contador+= lista[i];
+    }
+    return contador;
+}
+
 
 int main(){
     long long Tam = 1000000;
@@ -45,7 +54,7 @@ int main(){
     generarLista(lista,Tam);
    // mostrarArray(lista, Tam);
     cout<<suma(lista,0, Tam);
-
+ cout<<sumaiterativa(lista,Tam);
 system("pause");
 }
 
