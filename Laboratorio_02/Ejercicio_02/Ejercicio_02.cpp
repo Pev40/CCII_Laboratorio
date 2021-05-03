@@ -4,24 +4,29 @@
 
 using namespace std;
 
-void printArray(int *arr, int size){
+void printArray(long long *arr, long long size){
 	for (int i = 0; i < size; i++)
 		cout << arr[i] << " ";
 	cout << endl;
 }
 
-void rvereseArrayrecursivo(int *arr, int start, int end){
-	if (start > end/2 + 1)
-	return;
-	int temp = arr[start];
-	arr[start] = arr[end];
-	arr[end] = temp;
-	rvereseArrayrecursivo(arr, start + 1, end - 1);
+void rvereseArrayrecursivo(long long * arr, long long start, long long enld, long long temp){
+	cout <<"posicion "<<arr[start]<<" fin "<<arr[enld]<<"        "<<endl;
+	if (start < (enld)){
+		return;
+	}else{
+	temp = arr[start];
+	arr[start] = arr[enld];
+	arr[enld] = temp;
+	rvereseArrayrecursivo(arr, start + 1, enld - 1, temp);
+	}
+	
+	
 }
 
-void rvereseArrayiterativo(int arr[], int start, int end){
+void rvereseArrayiterativo(long long arr[], long long start, long long end){
 	while (start < end){
-		int temp = arr[start];
+		long long temp = arr[start];
 		arr[start] = arr[end];
 		arr[end] = temp;
 		start++;
@@ -30,15 +35,15 @@ void rvereseArrayiterativo(int arr[], int start, int end){
 }
 
 int main(){
-	const int n = 10000;
-	int *arr=new int [n];
+	long long n = 100000;
+	long long * arr = new long long [n];
 
 	for (int i=0; i<n; i++)
 		arr[i]=i+1;
-
-	rvereseArrayrecursivo(arr, 0, n-1);
+long long int temporal=0;
+	rvereseArrayrecursivo(arr, 0, 1000000,temporal );
 	printArray(arr, n);
-
+	system("pause");
 	delete arr;
 	return 0;
 }
