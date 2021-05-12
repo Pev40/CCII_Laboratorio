@@ -17,6 +17,10 @@ int main() {
     Point a(5,4);
     q.push_back(a);
     cout << q.getSize() << endl;
-
+    Point j(5,4);
+    q.insert(j,2);
+    cout << q.getSize() << endl;
+    q.remove(2);
+    cout << q.getSize() << endl;
     return 0;
 }
