@@ -18,9 +18,10 @@ int main() {
     q.push_back(a);
     cout << q.getSize() << endl;
     Point j(5,4);
-    q.insert(j,2);
-    cout << q.getSize() << endl;
-    q.remove(2);
-    cout << q.getSize() << endl;
+  //  q.insert(j,2);
+  //  cout << q.getSize() << endl;
+  //  q.remove(2);
+  //  cout << q.getSize() << endl;
+    system("pause");
     return 0;
 }
